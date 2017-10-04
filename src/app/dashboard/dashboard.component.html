@@ -1,15 +1,15 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2 sidebar-column">
+        <div class="col-xs-12  col-lg-2  sidebar-column">
             <div class="row">
-                <div  class="col-md-12" >
+                <div  class="col-xs-12" >
                     <gymo-sidebar-dashboard></gymo-sidebar-dashboard>
                 </div>
             </div>
         </div>
-        <div class="col-md-10 widgets-column" >
+        <div class="col-xs-12  col-lg-10  widgets-column" >
             <div class="row" >
-                <div class="col-md-4" *ngFor="let item of widgetsData; let i = index" [ngClass]="animateOnRouteEnter">
+                <div class="col-xs-12  col-lg-6  col-xl-4" *ngFor="let item of widgetsData; let i = index" [ngClass]="animateOnRouteEnter">
                     <gymo-widget [widgetType]="widgetsData[i].type" [widgetData]="widgetsData[i]"></gymo-widget>
                     <!-- <gymo-widget [widgetData]="widgetsData[i]"></gymo-widget>                     -->
                 </div>
