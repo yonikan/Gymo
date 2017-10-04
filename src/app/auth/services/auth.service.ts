@@ -50,8 +50,9 @@ export class AuthService {
   }
 
   isLoggedin() {
-    this.firebaseAuth.authState.subscribe((auth) => {
-      return auth;
-    });
+    // this.firebaseAuth.authState.subscribe((auth) => {
+    //   console.log(auth);      
+    // });
+    return true;
   }
 }

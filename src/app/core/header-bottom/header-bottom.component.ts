@@ -13,11 +13,13 @@ import { AddWidgetDialogComponent } from './add-widget-dialog/add-widget-dialog.
 export class HeaderBottomComponent implements OnInit {
 
     @Input() actionsList: any[];
-  
+    isLoggedin;
+    
     constructor(public dialog: MdDialog, private router: Router, public authService: AuthService ) { }
   
     ngOnInit() {
-
+      this.isLoggedin = this.authService.isLoggedin();
+      
     }
   
     openCreateWidgetDialog() {

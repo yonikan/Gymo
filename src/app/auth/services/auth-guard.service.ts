@@ -9,7 +9,13 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService) {}
   
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    return true;    
+    if (this.authService.user) {
+      return true;
+    } else {
+      return false;      
+    }
+
+    // return true;    
     // return this.authService.isAuthenticated();
   }
 }

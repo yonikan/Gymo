@@ -17,11 +17,9 @@ import { DashboardModule } from './dashboard/dashboard.module';
 
 import { AuthService } from './auth/services/auth.service';
 import { AuthGuard } from './auth/services/auth-guard.service';
-import { ToolbarActionsService } from './shared/services/toolbar-actions.service';
-import { FavoritesService } from './shared/services/favorites.service';
+import { AppStoreService } from './shared/app-store.service';
 
 import { AppComponent } from './app.component';
-// import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
 import { FeaturesComponent } from './features/features.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -43,7 +41,6 @@ import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog
     HeaderBottomComponent,
     ContentComponent,
     SidebarComponent,
-    // AuthComponent,    
     AppComponent,
     HomeComponent,
     FeaturesComponent,
@@ -72,8 +69,7 @@ import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog
   providers: [
     AuthService,
     AuthGuard,
-    ToolbarActionsService,
-    FavoritesService
+    AppStoreService
   ],
   bootstrap: [AppComponent]
 })

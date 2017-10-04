@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ToolbarActionsService {
+export class AppStoreService {
 
   // toolbarActionList: any[]= [];
 
@@ -17,5 +17,9 @@ export class ToolbarActionsService {
     } else {
       return;            
     }
+  }
+
+  getFavorites(){
+
   }
 }
