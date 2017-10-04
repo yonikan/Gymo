@@ -1,0 +1,71 @@
+
+@import '../../../assets/scss/_variables';
+// @import '~/assets/scss/variables';
+
+.mat-tab-label {
+    min-width: 200px;
+}
+.info-pane-wrapper {
+    height: 600px;
+    width: 400px;
+
+    .tab-header {
+        background-color: #cfcfcf;
+        color: $white;
+
+
+
+
+        .badge {
+            padding: 6px;
+            background-color: #aaaaaa;
+            border-radius: 18px;
+            width: 39px;
+            height: 20px;
+             margin-left: 6px;
+        }
+
+        h2 {
+            display: inline-block;
+            padding-left: 17px;
+            font-size: 18px;
+        }
+
+        .back-btn {
+            right: 20px;
+            top: 7px;
+            position: absolute;
+
+            button {
+                border-radius: 50px;
+                min-width: 2px; 
+            }
+        }
+    }
+
+
+    md-list {
+        md-list-item {
+            transition: width 2s;
+            -webkit-transition: width 2s;
+            color: #111;
+            background-color: #fff;
+
+            &:hover {
+                background-color: $primary;
+                color: #fff;
+            }
+
+            .widgets-actions {
+                // visibility: hidden;
+            }
+
+
+
+            .mat-list-icon {
+                color: rgba(0, 0, 0, 0.54);
+            }
+        }
+    }
+
+}

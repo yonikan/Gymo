@@ -1,0 +1,124 @@
+<md-card>
+    <div class="is-loading" *ngIf="isLoading">
+        <md-spinner></md-spinner>
+    </div>
+
+    <div class="" *ngIf="!isLoading">
+        <md-card-header #widgetHeader ng-class="'selected': true">
+            <span class="">
+                <md-card-title>test wid</md-card-title>
+                <span class="badge">3</span>                                
+            </span>
+            
+            <span class="widgets-actions" >
+                <button md-icon-button (click)="toggleListView()">
+                    <md-icon *ngIf="!isListViewMode" mdTooltip="Switch To List View">view_list</md-icon>    
+                    <md-icon *ngIf="isListViewMode" mdTooltip="Switch To Dounats Chart">pie_chart</md-icon>                                                
+                </button> 
+
+                <button md-icon-button (click)="directToInvestigation(widgetData.id)">
+                    <md-icon mdTooltip="expand">call_made</md-icon>                                                  
+                </button> 
+
+                <button md-icon-button [mdMenuTriggerFor]="menu">
+                     <md-icon>more_vert</md-icon>
+                </button>
+
+                <md-menu #menu="mdMenu">
+                    <button md-menu-item (click)="addToFavorites()">
+                        <md-icon>star_rate</md-icon>
+                        <span>Add to Favorites</span>
+                    </button>
+                    <md-divider></md-divider>
+                    <button md-menu-item (click)="editWidget()">
+                        <md-icon>mode_edit</md-icon>
+                        <span>Edit Widget</span>
+                    </button>
+                    <button md-menu-item (click)="deleteWidget()">
+                        <md-icon>delete</md-icon>
+                        <span>Delete Widget</span>
+                    </button>
+                </md-menu>
+            </span>
+        </md-card-header> 
+
+        <md-card-content >
+
+            <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">
+                <div *ngSwitchCase="'doughnutChart'">
+                    <canvas baseChart width="530" height="300"
+                            [options]="doughnutChartOptions"
+                            [data]="doughnutChartData"
+                            [labels]="doughnutChartLabels"
+                            [chartType]="doughnutChartType"
+                            [colors]="doughnutColors"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+                <div *ngSwitchCase="'lineChart'">
+                    <canvas baseChart width="530" height="300"
+                            [datasets]="lineChartData"
+                            [labels]="lineChartLabels"
+                            [options]="lineChartOptions"
+                            [colors]="lineChartColors"
+                            [legend]="lineChartLegend"
+                            [chartType]="lineChartType"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+
+            <div *ngIf="isListViewMode"  [ngClass]="animateOnRouteEnter">
+                <div style="display: block">
+                        <table>
+                                <tr>
+                                    <th></th>                
+                                    <th>{{ displayedColumns[0] }}</th>
+                                    <th>{{ displayedColumns[1] }}</th>
+                                    <th>{{ displayedColumns[2] }}</th>
+                                    <th>{{ displayedColumns[3] }}</th>
+                                </tr>
+                                <tr *ngFor="let row of tableData">
+                                    <td>
+                                        <md-checkbox></md-checkbox>
+                                    </td>
+                                    <td>{{ row.position }}</td>
+                                    <td>{{ row.name }}</td>
+                                    <td>{{ row.weight }}</td>
+                                    <td>{{ row.symbol }}</td>
+                                </tr>
+                        </table>
+
+
+
+
+                    <!-- <table class="table">
+                        <thead>
+                            <tr>
+                                <th width="50%">Name</th>
+                                <th>Size</th>
+                                <th>Progress</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <md-checkbox></md-checkbox>
+                                </td>
+                                <td nowrap>ascf</td>
+                                <td >fg</td>
+                                <td class="text-center">sdf</td>
+                                <td nowrap>dfsf</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                </div>
+            </div>
+
+        </md-card-content>
+    </div>   
+</md-card>

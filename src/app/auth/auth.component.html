@@ -1,0 +1,117 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" [ngClass]="animateOnRouteEnter">
+
+                <div class="logo-header" >
+                    <span><img src="./assets/img/logo.png"></span>
+                    <h1>GYMO</h1>
+                </div>
+
+                <md-card>
+                    <md-card-content>
+                        <div class="" *ngIf="authPage === 'login'" >
+                            <md-form-field class="example-full-width">
+                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+                            </md-form-field>
+    
+                            <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="password" type="password" placeholder="Password" >
+                            </md-form-field>
+    
+                            <button md-raised-button class="" (click)="login()">
+                                <i class="material-icons"></i> Log-in
+                            </button>
+
+                            <md-checkbox></md-checkbox> Stay logged in next time
+                            
+
+                                                        
+                            <div class="more-actions">
+                                <div class=""><a (click)="authPage = 'reset'" class="">Forgot password?</a></div>
+                                <div>Do not have an account? <a (click)="authPage = 'signup'">Sign up</a></div>
+                            </div>
+    
+                            <button md-raised-button class="other-btn" (click)="loginWithGoogle()">
+                                <i class="material-icons"></i> Log-in With Google
+                            </button>
+    
+                            <!-- <button md-raised-button class="other-btn" (click)="null">
+                                <i class="material-icons"></i> Log-in With Facebook
+                            </button> -->
+                            
+                            <!-- <button md-raised-button (click)="signup()" [disabled]="!email || !password">
+                                <i class="material-icons"></i> Log-out
+                            </button> -->
+                        </div>
+
+                        <div class="" *ngIf="authPage === 'signup'">
+
+                            <md-form-field class="example-full-width">
+                                <input mdInput [(ngModel)]="first" type="text" placeholder="First Name" >
+                            </md-form-field>
+
+                            <md-form-field class="example-full-width">
+                                <input mdInput [(ngModel)]="last" type="text" placeholder="Last Name" >
+                            </md-form-field>
+
+                            <table>
+                                    <tr>
+                                        <td>
+                                            <md-form-field class="example-full-width">
+                                                    <input mdInput [(ngModel)]="last" type="text" placeholder="Gender" >
+                                            </md-form-field>
+                                        </td>
+                                        <td>
+                                            <md-form-field class="example-full-width">
+                                                <input mdInput [(ngModel)]="last" type="text" placeholder="birthday" >
+                                            </md-form-field>
+                                        </td>
+                                    </tr>
+                            </table>
+
+                            <md-form-field class="example-full-width">
+                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+                            </md-form-field>
+    
+                            <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="password" type="password" placeholder="Password" >
+                            </md-form-field>
+    
+                            <button md-raised-button class="" (click)="login()">
+                                <i class="material-icons"></i> Sign-Up
+                            </button>
+
+                            <div class="more-actions">
+                                <div>Already have an account? <a (click)="authPage = 'login'">Sign in</a></div>
+                            </div>
+                        </div>
+
+                        <div class="" *ngIf="authPage === 'reset'">
+                            <md-form-field class="example-full-width">
+                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+                            </md-form-field>
+    
+                            <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="password" type="password" placeholder="Password" >
+                            </md-form-field>
+    
+                            <button md-raised-button class="" (click)="null">
+                                <i class="material-icons"></i> Rest Password
+                            </button>
+                            
+                            <div class="more-actions">
+                                <div>Do not have an account? <a (click)="authPage = 'signup'">Sign up</a></div>                                
+                            </div>
+                        </div>
+                    </md-card-content>
+                </md-card>
+          
+            </div>
+
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+  

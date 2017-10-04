@@ -1,0 +1,39 @@
+@import '../../../../assets/scss/_variables';
+// @import '~scss/variables';
+
+
+.monitor-dialog-wrapper {
+    width: 1400px;
+    height: 600px;
+
+    table {
+        width: 90%;
+        margin: 0 auto;
+
+        tr {
+
+            &:nth-child(even) {
+                background: #f9f9f9;
+            }
+
+            th {
+                width: 25%;
+                padding-left: 7px;
+                
+                &:first-child {
+                    width: 40px;                  
+                }
+            }
+
+            td {
+                padding: 7px 0;
+                padding-left: 7px;
+
+                &:first-child {
+                    width: 40px;                   
+                }
+            }
+        }
+
+    }
+}

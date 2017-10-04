@@ -1,0 +1,102 @@
+
+@import '../../../assets/scss/_variables';
+// @import '~/assets/scss/_variables';
+
+
+.header-top-wrapper {
+    width: 100%;
+    height: 30px;
+    // display: inline-block;
+    background-color: $background-color-light !important;
+    color: $white;
+    // box-shadow: 10px 10px 5px grey;
+    font-size: 13px;
+
+    i {
+        margin-left: 30px;
+        // border-left: 1px solid $white;
+        font-size: 16px;
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+
+    .actions {
+        position: absolute;
+        right: 30px;
+        // padding-left: 30px;
+        // padding-top: 8px;
+
+        .welcome-text {
+            margin-left: 20px;
+        }
+
+        .animation-wrapper {
+                // background-color: $primary;
+                // border-radius: 10px;
+
+            .animation {
+                background-color: $primary;
+                border-radius: 30px;
+                padding: 1px;
+                margin-left: 1px;
+                animation: spin 2000ms linear infinite;
+
+                // font-size: 11px;
+
+                @-moz-keyframes spin {
+                    to { -moz-transform: rotate(359deg); }
+                }
+                @-webkit-keyframes spin {
+                    to { -webkit-transform: rotate(359deg); }
+                }
+                @keyframes spin {
+                    to {transform:rotate(359deg);}
+                }
+            }
+        }
+
+        .notification-wrapper {
+
+            .badge {
+                background-color: #0cc2aa;
+                border-radius: 10px;
+                padding: 0 4px;
+                font-size: 12px;
+                font-weight: bold;
+                position: relative;
+                right: 3px;
+                bottom: 7px;
+            }
+        }
+    }
+
+
+    a {
+        color: $white !important;
+    }
+
+    img {
+        padding-top: 10px;
+        padding-left: 40px;
+        height: 40px !important;
+        width: 40px;
+    }
+
+
+
+    md-card {
+        .example-card {
+        width: 200px;
+        }
+
+        .example-header-image {
+        // background-image: url('./assets/img/test22/shiba1.jpg');
+        background-size: cover;
+        background-color: $primary;
+        }
+    }
+}

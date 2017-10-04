@@ -1,0 +1,22 @@
+
+
+.add-widget-dialog-wrapper {
+    min-width: 800px;
+    min-height: 400px;
+
+    .form-group {
+        margin-bottom: 35px;
+
+        .widget-types-radio-button {
+            margin-left: 25px;
+        }
+
+        .date-picker-radio-group {
+            margin-left: 18px;            
+        }
+
+        md-datepicker {
+            margin-left: 25px;  
+        }
+    }
+}

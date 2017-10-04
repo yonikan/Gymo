@@ -1,0 +1,27 @@
+
+<div class="monitor-dialog-wrapper">
+    <table>
+        <tr>
+            <th></th>                
+            <th>{{ displayedColumns[0] }}</th>
+            <th>{{ displayedColumns[1] }}</th>
+            <th>{{ displayedColumns[2] }}</th>
+            <th>{{ displayedColumns[3] }}</th>
+        </tr>
+        <tr *ngFor="let row of tableData">
+            <td>
+                <md-checkbox></md-checkbox>
+            </td>
+            <td>{{ row.position }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.weight }}</td>
+            <td>{{ row.symbol }}</td>
+        </tr>
+    </table>
+
+    <md-paginator [length]="tableData.length" 
+                    [pageSize]="10"
+                    [pageSizeOptions]="[5, 10, 25, 100]">
+    </md-paginator>
+
+</div>  
