@@ -14,3 +14,16 @@ export const environment = {
     messagingSenderId: "241419880729"
   }
 };
+
+// export const environment = {
+//   production: false,
+//   firebase: {
+//     apiKey: "AIzaSyA6h_dqyRZ_eFuWt-Rn99f1CjnUSKfVsw8",
+//     authDomain: "gymo-c670c.firebaseapp.com",
+//     databaseURL: "https://gymo-c670c.firebaseio.com",
+//     projectId: "gymo-c670c",
+//     storageBucket: "gymo-c670c.appspot.com",
+//     messagingSenderId: "989687019096"
+//   }
+// };
+

@@ -9,9 +9,12 @@ import * as firebase from 'firebase/app';
 export class AuthService {
 
   user: Observable<firebase.User>;
-
+  private loggedIn: boolean = false;
+  
   constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
+    console.log(this.user);
+    
   }
 
   signup(email: string, password: string) {
@@ -32,6 +35,8 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(value => {
         console.log('Nice, it worked!');
+
+        // return true;
       })
       .catch(err => {
         console.log('Something went wrong:',err.message);
@@ -49,10 +54,30 @@ export class AuthService {
       .signOut();
   }
 
-  isLoggedin() {
+  isLoggedin(): any {
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      // if (user) {
+      //   console.log(user);
+      //   return true;
+      // } 
+
+      // return false;
+    });
+
+
     // this.firebaseAuth.authState.subscribe((auth) => {
     //   console.log(auth);      
     // });
+    // console.log(this.user);
+    // console.log(firebase.auth().currentUser);
+    
+    // if (this.loggedIn) {
+    //   return true;
+    // } else {
+    //   return false;      
+    // }
+
     return true;
   }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+// import { HttpClient } from '@angular/common/http';
+// import { Http, Response, Headers } from '@angular/http';
 // import { Observable } from 'rxjs/Rx';
 // import 'rxjs/add/operator/map';
 // import 'rxjs/add/operator/catch';
@@ -7,12 +8,9 @@ import { Http, Response, Headers } from '@angular/http';
 @Injectable()
 export class DashboardStoreService {
 
-  results: string[];
-
-  constructor(private http: Http) {}
+  constructor() {}
 
   getWidgetsData(){
-
     return [
       {
         type: 'lineChart',
@@ -51,9 +49,6 @@ export class DashboardStoreService {
         ]
       },
     ];
-
-    // this.http.get('./assets/widgets.json').subscribe(res => this.results = res.json());
-    // console.log(this.results);
   }
 }
 

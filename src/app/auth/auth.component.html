@@ -24,6 +24,10 @@
                                 <i class="material-icons"></i> Log-in
                             </button>
 
+                            <button md-raised-button class="other-btn" (click)="loginWithGoogle()">
+                                <i class="material-icons"></i> Log-in With Google
+                            </button>
+                            
                             <md-checkbox></md-checkbox> Stay logged in next time
                             
 
@@ -33,9 +37,6 @@
                                 <div>Do not have an account? <a (click)="authPage = 'signup'">Sign up</a></div>
                             </div>
     
-                            <button md-raised-button class="other-btn" (click)="loginWithGoogle()">
-                                <i class="material-icons"></i> Log-in With Google
-                            </button>
     
                             <!-- <button md-raised-button class="other-btn" (click)="null">
                                 <i class="material-icons"></i> Log-in With Facebook
@@ -49,12 +50,12 @@
                         <div class="" *ngIf="authPage === 'signup'">
 
                             <md-form-field class="example-full-width">
-                                <input mdInput [(ngModel)]="first" type="text" placeholder="First Name" >
+                                <input mdInput [(ngModel)]="displayName" type="text" placeholder="Full Name" >
                             </md-form-field>
 
-                            <md-form-field class="example-full-width">
+                            <!-- <md-form-field class="example-full-width">
                                 <input mdInput [(ngModel)]="last" type="text" placeholder="Last Name" >
-                            </md-form-field>
+                            </md-form-field> -->
 
                             <table>
                                     <tr>

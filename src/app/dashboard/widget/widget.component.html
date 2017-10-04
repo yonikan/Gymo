@@ -44,6 +44,11 @@
 
         <md-card-content >
 
+            <!-- <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">                
+            <div *ngSwitchCase="'doughnutChart'">
+                <div *ngSwitchCase="'lineChart'"> -->
+                    
+                
             <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">
                 <div *ngSwitchCase="'doughnutChart'">
                     <canvas baseChart width="530" height="300"

@@ -11,11 +11,16 @@ import { ANIMATE_ON_ROUTE_ENTER } from '../../shared/router.transition';
 })
 export class WidgetComponent implements OnInit {
 
+  @Input() widgetType: any[];
+
+  @Input() widgetData: any[];
+  // widgetType;
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
-  
+  isLoading: boolean = true; 
+  isListViewMode: boolean = false; 
+
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  
-  tableData= [
+  tableData = [
     {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
     {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
     {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
@@ -25,14 +30,7 @@ export class WidgetComponent implements OnInit {
   ];
 
 
-
-  @Input() widgetType: any[];
-  @Input() widgetData: any[];
-  isLoading: boolean = true; 
-  isListViewMode: boolean = false; 
-
-  constructor(private router: Router, public dialog: MdDialog ) {}
-
+  constructor(private router: Router, public dialog: MdDialog) {}
 
 
    // DoughnutChart ===================================================
@@ -65,10 +63,13 @@ export class WidgetComponent implements OnInit {
       pointHoverBorderColor: 'rgba(148,159,177,0.8)'
     }
   ];
-
   public doughnutChartType: string = 'doughnut';     
   public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
   public doughnutChartData: number[] = [350, 450, 100];
+  // public doughnutChartType: string = this.widgetData.type;     
+  // public doughnutChartLabels: string[] = this.widgetData.lineChartLabels;
+  // public doughnutChartData: number[] = this.widgetData.lineChartData;
+
 
   
    // lineChart ===================================================
@@ -103,7 +104,6 @@ export class WidgetComponent implements OnInit {
     }
   ];
   public lineChartLegend: boolean = true;
-
   public lineChartType: string = 'line';   
   public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];  
   public lineChartData: Array<any> = [
@@ -113,19 +113,24 @@ export class WidgetComponent implements OnInit {
   ];
 
 
-
   ngOnInit() {
-    setTimeout(() => {
-       this.isLoading = false;
-    }, 1500)
-  }
+    // setTimeout(() => {
+    //    this.isLoading = false;
+    // }, 1500)
 
-  directToInvestigation(widgetId: number) {
-    this.router.navigate([`/dashboard/investigation/${widgetId}`]);
+    this.isLoading = false;
+
+    // console.log(this.widgetData);
+    
+    // this.widgetType =  this.widgetData["type"];
   }
 
   editWidget() {
     this.dialog.open(AddWidgetDialogComponent);    
+  }
+
+  directToInvestigation(widgetId: number) {
+    this.router.navigate([`/dashboard/investigation/${widgetId}`]);
   }
 
   toggleListView() {

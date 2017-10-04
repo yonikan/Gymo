@@ -2,73 +2,11 @@
     <md-tab-group>
       <md-tab>
         
-        <ng-template md-tab-label>
-          <md-icon>star</md-icon>
-        </ng-template>
-  
-        <div class="tab-header">
-          <h2>FAVORITES</h2> <span class="badge">3</span>
-          <span class="back-btn">
-            <button md-button (click)="sidenav.close()">
-              <md-icon md-list-icon>keyboard_arrow_right</md-icon>
-            </button>
-          </span> 
-        </div>
-        <!-- <app-omni-panel></app-omni-panel>
-        <app-favorites-panel></app-favorites-panel> -->
-        <md-list>
-          <h3 md-subheader>Folders</h3>
-  
-          <md-list-item *ngFor="let folder of folders">
-            <md-icon md-list-icon>note</md-icon>
-  
-            <h4 md-line>{{folder.name}}</h4>
-  
-            <p md-line> {{folder.updated | date}} </p>
-  
-            <span appShowMenu class="widgets-actions">
-              <button md-icon-button>
-                <md-icon>more_vert</md-icon>
-              </button>
-              <!-- <md-menu #menu="mdMenu">
-                <button md-menu-item>
-                  <md-icon>open_in_new</md-icon>
-                  <span>Open In Invastigation Mode</span>
-                </button>
-                <button md-menu-item>
-                    <md-icon>star_border</md-icon>
-                    <span>Remove From Favorites</span>
-                </button>
-              </md-menu> -->
-            </span>
-  
-          </md-list-item>
-  
-          <md-divider></md-divider>
-  
-          <h3 md-subheader>Notes</h3>
-          <md-list-item *ngFor="let note of notes">
-            <md-icon md-list-icon>star</md-icon>
-            <h4 md-line>{{note.name}}</h4>
-            <p md-line> {{note.updated | date}} </p>
-          </md-list-item>
-  
-        </md-list>
       </md-tab>
   
       
       <md-tab>
-        <ng-template md-tab-label>
-          <md-icon>language</md-icon>
-        </ng-template>
-  
-        <div class="tab-header">
-          <h2>OMNI PANEL</h2>
-          <span class="back-btn"><button md-button><md-icon md-list-icon>keyboard_arrow_right</md-icon></button></span> 
-        </div>
-  
-        <!-- <app-no-data bind-noDataText="noDataText"></app-no-data> -->
-  
+
       </md-tab>
     </md-tab-group>
   </div>

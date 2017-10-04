@@ -32,6 +32,8 @@ import { CanvasComponent } from './core/canvas/canvas.component';
 import { MonitorDialogComponent } from './core/header-top/monitor-dialog/monitor-dialog.component';
 import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog/add-widget-dialog.component';
 
+import { ShowMenuDirective } from './shared/show-menu.directive';
+
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog
     FeaturesComponent,
     SettingsComponent,
     MonitorDialogComponent,
-    AddWidgetDialogComponent
+    AddWidgetDialogComponent,
+    ShowMenuDirective
   ],
   entryComponents: [
     MonitorDialogComponent,

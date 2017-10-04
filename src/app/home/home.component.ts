@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
   
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
     this.authService.isLoggedin();

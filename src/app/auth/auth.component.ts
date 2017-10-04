@@ -14,8 +14,10 @@ export class AuthComponent implements OnInit {
   
   isLogin: boolean = true;
   authPage: string = 'login';
+
   email: string;
   password: string;
+  displayName: string;
 
   constructor(public authService: AuthService, private router: Router ) { }
 

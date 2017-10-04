@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { ANIMATE_ON_ROUTE_ENTER } from '../shared/router.transition';
 
 import { DashboardStoreService } from './services/dashboardStore.service';
@@ -12,13 +13,25 @@ import { DashboardStoreService } from './services/dashboardStore.service';
 export class DashboardComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER; 
-  widgetsData: any;
-
-  constructor(private dashboardStoreService: DashboardStoreService ) { 
+  widgetsData;
+  results;
+  
+  constructor(private http: HttpClient, private dashboardStoreService: DashboardStoreService ) { 
 
   }
 
   ngOnInit() {
     this.widgetsData = this.dashboardStoreService.getWidgetsData();
+
+    // this.getWidgetsData(); 
+    // this.widgetsData = this.getWidgetsData();    
+    // console.log(this.widgetsData);
   }
+
+  // getWidgetsData(){
+  //   return this.http.get('assets/json/widgets.json').subscribe(data => {
+  //     console.log(data['results']);
+  //     this.widgetsData = data['results'];
+  //   });
+  // }
 }

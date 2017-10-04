@@ -14,7 +14,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule', canActivate: [AuthGuard] },
   { path: 'features', component: FeaturesComponent, canActivate: [AuthGuard] },  
-  { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard] },
+  { path: 'settings', component: SettingsComponent, canActivate: [AuthGuard] }
     // { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
   // { path: '**', redirectTo: '/not-found' }
 ];

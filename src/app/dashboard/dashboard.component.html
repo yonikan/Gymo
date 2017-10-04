@@ -11,6 +11,7 @@
             <div class="row" >
                 <div class="col-md-4" *ngFor="let item of widgetsData; let i = index" [ngClass]="animateOnRouteEnter">
                     <gymo-widget [widgetType]="widgetsData[i].type" [widgetData]="widgetsData[i]"></gymo-widget>
+                    <!-- <gymo-widget [widgetData]="widgetsData[i]"></gymo-widget>                     -->
                 </div>
             </div>
         </div>
