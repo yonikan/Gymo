@@ -1,6 +1,11 @@
 @import '../../../assets/scss/_variables';
 
 .header-bottom-wrapper {
+    position: fixed;
+    top: 30px;
+    z-index: 100;
+
+    width: 100%;
     height: 58px;
     background-color: $background-color-dark;
     color: $white;

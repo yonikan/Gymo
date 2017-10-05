@@ -1,0 +1,17 @@
+@import '../../../assets/scss/_variables';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+
+    .mini-fab {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        // width: 30px;
+        // height: 30px; 
+        background-color: $secondary;
+        color: #fff;
+    }
+}
+

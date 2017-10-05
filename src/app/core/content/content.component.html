@@ -13,7 +13,7 @@
     
 </md-sidenav-container> -->
             
-<div [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
-        <router-outlet #o="outlet" class="router-outlet-wrapper"></router-outlet>
+<div [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path" class="test">
+    <router-outlet #o="outlet" class="router-outlet-wrapper"></router-outlet>
 </div>
 

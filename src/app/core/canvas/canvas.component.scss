@@ -10,3 +10,38 @@
     //     height: 400px;
     //     width: 12px;
     // }
+
+
+    
+.pane-wrapper {
+    background-color: $background-info-pane;
+    width: $width-info-pane;
+    border-top: 20px solid $background-color-dark;
+    background-color: #fff;
+    border: 3px solid #d6d6d6;
+}
+
+.content-wrapper {
+    // background-color: $background-color-light-blue;
+    // min-height: 1900px;
+    
+    // remove if there is a fab button outside of the component
+    // background-color: $background-color-light-gray;
+    
+    .router-outlet-wrapper {
+        // background-color: $background-color-light-blue;
+        // width: 1200px;
+        // margin: 0 auto;
+        // padding: 40px;
+    }
+
+    // .mini-fab {
+    //     position: fixed;
+    //     bottom: 10px;
+    //     right: 10px;
+    //     // width: 30px;
+    //     // height: 30px; 
+    //     background-color: $secondary;
+    //     color: #fff;
+    // }
+}
