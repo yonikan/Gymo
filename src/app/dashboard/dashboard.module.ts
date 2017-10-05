@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChartsModule } from 'ng2-charts';
-
-import { NgMaterialModule } from '../shared/ng-material.module';
 import { HttpModule } from '@angular/http';
+import { NgMaterialModule } from '../shared/ng-material.module';
+
+import { ChartsModule } from 'ng2-charts';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardStoreService } from './services/dashboardStore.service';
 
@@ -18,9 +18,13 @@ const dashboardRoutes: Routes = [
   {
     path: 'investigation',
     component: InvestigationComponent,
-    data: { routerName: 'investigation' },
+    // data: { routerName: 'investigation' },
     children: [
-       { path: ':id', component: InvestigationComponent }
+       { 
+         path: ':id',
+         component: InvestigationComponent,
+         data: { routerName: 'investigation' }         
+       }
     ]
   }
 ]; 

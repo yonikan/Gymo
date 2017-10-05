@@ -43,39 +43,31 @@
         </md-card-header> 
 
         <md-card-content >
-
-            <!-- <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">                
-            <div *ngSwitchCase="'doughnutChart'">
-                <div *ngSwitchCase="'lineChart'"> -->
-                    
-                
             <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">
                 <div *ngSwitchCase="'doughnutChart'">
-                    <canvas baseChart width="530" height="300"
+                    <canvas baseChart
+                            width="530" height="300"
                             [options]="doughnutChartOptions"
                             [data]="doughnutChartData"
                             [labels]="doughnutChartLabels"
                             [chartType]="doughnutChartType"
-                            [colors]="doughnutColors"
-                            (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)">
+                            [colors]="doughnutColors">
                     </canvas>
                 </div>
                 <div *ngSwitchCase="'lineChart'">
-                    <canvas baseChart width="530" height="300"
+                    <canvas baseChart
+                            width="530" height="300"
                             [datasets]="lineChartData"
                             [labels]="lineChartLabels"
                             [options]="lineChartOptions"
                             [colors]="lineChartColors"
                             [legend]="lineChartLegend"
-                            [chartType]="lineChartType"
-                            (chartHover)="chartHovered($event)"
-                            (chartClick)="chartClicked($event)">
+                            [chartType]="lineChartType">
                     </canvas>
                 </div>
             </div>
 
-            <div *ngIf="isListViewMode"  [ngClass]="animateOnRouteEnter">
+            <div *ngIf="isListViewMode" [ngClass]="animateOnRouteEnter">
                 <div style="display: block">
                         <table>
                                 <tr>
@@ -123,7 +115,6 @@
                     </table> -->
                 </div>
             </div>
-
         </md-card-content>
     </div>   
 </md-card>
