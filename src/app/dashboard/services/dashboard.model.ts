@@ -12,3 +12,10 @@ export class Dashboard {
       this.widgets = widgets;
     }
   }
+
+
+// export interface DashboardModel {
+//     id: number;
+//     name: string;
+//     type: string;
+// }

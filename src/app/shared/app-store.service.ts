@@ -11,11 +11,11 @@ export class AppStoreService {
 
   getToolbarActions(currentPage: string){
     if (currentPage === 'dashboard') {
-      return;      
+      return ['add_widget', 'save_dashboard'];   
     } else if (currentPage === 'investigation') {
-      return;   
+      return ['back_btn'];    
     } else {
-      return;            
+      return [];            
     }
   }
 

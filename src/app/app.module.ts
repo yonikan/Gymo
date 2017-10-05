@@ -8,10 +8,10 @@ import { NgMaterialModule } from './shared/ng-material.module';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing';
 
 // import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
+// import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
@@ -33,8 +33,8 @@ import { MonitorDialogComponent } from './core/header-top/monitor-dialog/monitor
 import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog/add-widget-dialog.component';
 
 import { ShowMenuDirective } from './shared/show-menu.directive';
-
-
+import { NoDataComponent } from './shared/no-data/no-data.component';
+import { MembersComponent } from './members/members.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,9 @@ import { ShowMenuDirective } from './shared/show-menu.directive';
     SettingsComponent,
     MonitorDialogComponent,
     AddWidgetDialogComponent,
-    ShowMenuDirective
+    NoDataComponent,
+    ShowMenuDirective,
+    MembersComponent
   ],
   entryComponents: [
     MonitorDialogComponent,
@@ -63,7 +65,7 @@ import { ShowMenuDirective } from './shared/show-menu.directive';
     BrowserAnimationsModule,
     NgMaterialModule,
     // CoreModule,
-    SharedModule,
+    // SharedModule,
     AuthModule,
     DashboardModule,
     AngularFireModule.initializeApp(environment.firebase),

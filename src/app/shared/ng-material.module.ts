@@ -98,7 +98,6 @@ import {
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule
-  ],
-  declarations: []
+  ]
 })
 export class NgMaterialModule { }

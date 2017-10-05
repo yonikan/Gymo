@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DashboardStoreService } from '../services/dashboardStore.service';
 
 @Component({
   selector: 'gymo-investigation',
@@ -9,11 +10,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class InvestigationComponent implements OnInit {
 
   routerName = this.route.snapshot.data['routerName']; 
-  
-  constructor(    private route: ActivatedRoute, private router: Router) { }
+  investigationData;
+
+  constructor(
+     private route: ActivatedRoute,
+     private router: Router, 
+     private dashboardStoreService: DashboardStoreService
+  ) { }
 
   ngOnInit() {
     console.log(this.routerName);
+
+    // this.investigationData = this.dashboardStoreService.getWidgetData(1);
+    
   }
 
 }
