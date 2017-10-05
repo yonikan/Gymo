@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 
 
 @Injectable()
@@ -10,6 +10,7 @@ export class AuthService {
 
   user: Observable<firebase.User>;
   private loggedIn: boolean = false;
+  token: string;
   
   constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
@@ -80,4 +81,20 @@ export class AuthService {
 
     return true;
   }
+
+
+  // maximilian impimitation ===================
+  getToken() {
+    firebase.auth().currentUser.getToken()
+      .then(
+        (token: string) => this.token = token
+      );
+    return this.token;
+  }
+
+  isAuthenticated() {
+    console.log(this.token != null);
+    return this.token != null;
+  }
+
 }

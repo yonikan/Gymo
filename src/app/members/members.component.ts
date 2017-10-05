@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ANIMATE_ON_ROUTE_ENTER } from '../shared/router.transition';
 
 @Component({
   selector: 'gymo-members',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
 
+  animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+// import { FooterComponent } from './footer/footer.component';
 // import { CanvasComponent } from './canvas/canvas.component';
 // import { HeaderTopComponent } from './header-top/header-top.component';
 // import { HeaderBottomComponent } from './header-bottom/header-bottom.component';
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     // SidebarComponent,
     // MonitorDialogComponent,
     // AddWidgetDialogComponent
+    // FooterComponent
   ],
   exports: [
     

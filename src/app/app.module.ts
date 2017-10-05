@@ -28,6 +28,8 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ContentComponent } from './core/content/content.component';
 import { HeaderBottomComponent } from './core/header-bottom/header-bottom.component';
 import { HeaderTopComponent } from './core/header-top/header-top.component';
+import { FooterComponent } from './core/footer/footer.component';
+
 import { CanvasComponent } from './core/canvas/canvas.component';
 import { MonitorDialogComponent } from './core/header-top/monitor-dialog/monitor-dialog.component';
 import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog/add-widget-dialog.component';
@@ -41,6 +43,7 @@ import { MembersComponent } from './members/members.component';
     CanvasComponent,
     HeaderTopComponent,
     HeaderBottomComponent,
+    FooterComponent,
     ContentComponent,
     SidebarComponent,
     AppComponent,
