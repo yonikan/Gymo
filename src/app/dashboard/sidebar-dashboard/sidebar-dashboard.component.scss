@@ -1,3 +1,4 @@
+@import '../../../assets/scss/_variables';
 
 // .sidebar-dashboard- {
 //     width: 300px;
@@ -8,4 +9,10 @@
 
 md-card {
     height: 750px;
+
+    button {
+        margin-top:12px;
+        color: $white;
+        background-color: $primary;
+    }
 }

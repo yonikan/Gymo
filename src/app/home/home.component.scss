@@ -1,11 +1,9 @@
 @import '../../assets/scss/_variables';
 
-
 .background {
     padding: 100px 0;
     position: relative;
     top: 88px;
-    
     
     h1 {
       text-align: center;
@@ -53,7 +51,6 @@
       }
     }
   
-  
     &::before {
       position: absolute;
       top: 0;
@@ -78,10 +75,7 @@
         z-index: 0;
       }
     }
-  
   }
-  
-  
 
   md-card {
     margin: 0 0 20px 0;
@@ -111,58 +105,4 @@
       }
     }
   }
-
-
-
-
-
-// ============= OLD VERSION ==========================
-// @import '~/scss/_variables';
-// links-landing-page {
-//   display: flex;
-//   height: 100%;
-//   width: 100%;
-
-//   .landing-groups {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-
-//     .landing-group {
-//       display: flex;
-//       width: 600px;
-//       height: 200px;
-//       align-items: center;
-//       border: 1px solid lightgray;
-//       justify-content: center;
-//       margin: 30px;
-//     }
-//   }
-// }
-
-// .landing-header {
-//     height: 170px;
-//     background-color: $primary;
-//     color: $white;
-//     text-align: center;
-//     padding-top: 20px;
-// }
-
-// .landing-groups {
-// display: flex;
-// flex-direction: row;
-// flex-wrap: wrap;
-
-// .landing-group {
-//     display: flex;
-//     width: 600px;
-//     height: 200px;
-//     align-items: center;
-//     border: 1px solid lightgray;
-//     justify-content: center;
-//     margin: 30px;
-
-//     background-color: $white;
-// }
-
-// }
+  

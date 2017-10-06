@@ -1,7 +1,7 @@
 <md-card>
-    <md-card-title>Managment</md-card-title>
+    <md-card-title>Query Builder</md-card-title>
     <md-card-subtitle>
-        Dashboards Managment
+        Query Builder Managment
     </md-card-subtitle>
     
     <md-card-content >
@@ -11,7 +11,10 @@
               <md-expansion-panel-header>
                 This is the expansion 1 title
               </md-expansion-panel-header>
-              This the expansion 1 content
+              <br>
+              <md-checkbox>Check me!</md-checkbox><br>
+              <md-checkbox>Check me!</md-checkbox>
+
             </md-expansion-panel>
           
             <md-expansion-panel>
@@ -34,7 +37,11 @@
               </md-expansion-panel-header>
               This the expansion 2 content
             </md-expansion-panel>
-        </md-accordion>
+      </md-accordion>
         
+      <button md-raised-button class="" (click)="null">
+          <i class="material-icons"></i> Submit Query
+      </button>
+
     </md-card-content>
 </md-card>

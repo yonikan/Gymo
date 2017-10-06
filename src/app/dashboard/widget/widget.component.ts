@@ -114,11 +114,11 @@ export class WidgetComponent implements OnInit {
 
 
   ngOnInit() {
-    // setTimeout(() => {
-    //    this.isLoading = false;
-    // }, 1500)
+    setTimeout(() => {
+       this.isLoading = false;
+    }, 1000)
 
-    this.isLoading = false;
+    // this.isLoading = false;
 
     // console.log(this.widgetData);
     

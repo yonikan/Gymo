@@ -10,7 +10,7 @@ import { MembersComponent } from './members/members.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/auth', pathMatch: 'full' },
-  { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},  
+  { path: 'auth', component: AuthComponent},  
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule', canActivate: [AuthGuard] },
   { path: 'members', component: MembersComponent, canActivate: [AuthGuard] },    

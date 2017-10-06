@@ -70,17 +70,15 @@
             <div *ngIf="isListViewMode" [ngClass]="animateOnRouteEnter">
                 <div style="display: block">
                         <table>
-                                <tr>
+                                <!-- <tr>
                                     <th></th>                
                                     <th>{{ displayedColumns[0] }}</th>
                                     <th>{{ displayedColumns[1] }}</th>
                                     <th>{{ displayedColumns[2] }}</th>
                                     <th>{{ displayedColumns[3] }}</th>
-                                </tr>
+                                </tr> -->
                                 <tr *ngFor="let row of tableData">
-                                    <td>
-                                        <md-checkbox></md-checkbox>
-                                    </td>
+                                    <td><md-checkbox></md-checkbox></td>
                                     <td>{{ row.position }}</td>
                                     <td>{{ row.name }}</td>
                                     <td>{{ row.weight }}</td>

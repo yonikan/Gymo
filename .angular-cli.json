@@ -20,7 +20,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "gymo",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

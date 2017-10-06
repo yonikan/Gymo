@@ -1,5 +1,7 @@
 {
-    "name": "Gymo",
+    "name": "Gymo as Progressive Web App",
+    "short_name": "PWA Gymo",
+    "description": "Sports monitoring app",    
     "theme_color": "#0cc2aa",
     "background_color": "#2196f3",
     "display": "standalone",

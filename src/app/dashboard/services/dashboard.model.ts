@@ -1,6 +1,5 @@
 import { Widget } from "./widget.model";
 
-
 export class Dashboard {
     public name: string;
     public description: string;

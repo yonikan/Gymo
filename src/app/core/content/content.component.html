@@ -1,5 +1,3 @@
-
-
 <!-- <md-sidenav-container>
 
     <md-sidenav #infopane mode="over" opened="false" class="pane-wrapper" >
@@ -12,8 +10,8 @@
     </div>
     
 </md-sidenav-container> -->
-            
-<div [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path" class="test">
-    <router-outlet #o="outlet" class="router-outlet-wrapper"></router-outlet>
-</div>
+      
 
+<div [@routerTransition]="o.isActivated && o.activatedRoute.routeConfig.path">
+    <router-outlet #o="outlet"></router-outlet>
+</div>

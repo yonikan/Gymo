@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app.routing';
 
 // import { CoreModule } from './core/core.module';
 // import { SharedModule } from './shared/shared.module';
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 import { AuthService } from './auth/services/auth.service';
@@ -37,6 +37,7 @@ import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog
 import { ShowMenuDirective } from './shared/show-menu.directive';
 import { NoDataComponent } from './shared/no-data/no-data.component';
 import { MembersComponent } from './members/members.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { MembersComponent } from './members/members.component';
     AddWidgetDialogComponent,
     NoDataComponent,
     ShowMenuDirective,
-    MembersComponent
+    MembersComponent,
+    AuthComponent    
   ],
   entryComponents: [
     MonitorDialogComponent,
@@ -69,7 +71,7 @@ import { MembersComponent } from './members/members.component';
     NgMaterialModule,
     // CoreModule,
     // SharedModule,
-    AuthModule,
+    // AuthModule,
     DashboardModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule
