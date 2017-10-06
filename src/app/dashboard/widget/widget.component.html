@@ -1,6 +1,6 @@
 <md-card>
     <div class="is-loading" *ngIf="isLoading">
-        <md-spinner></md-spinner>
+        <md-spinner color="primary"></md-spinner>
     </div>
 
     <div class="" *ngIf="!isLoading">
@@ -17,7 +17,7 @@
                 </button> 
 
                 <button md-icon-button (click)="directToInvestigation(widgetData.id)">
-                    <md-icon mdTooltip="expand">call_made</md-icon>                                                  
+                    <md-icon mdTooltip="Investigation Mode">call_made</md-icon>                                                  
                 </button> 
 
                 <button md-icon-button [mdMenuTriggerFor]="menu">
@@ -78,7 +78,7 @@
                                     <th>{{ displayedColumns[3] }}</th>
                                 </tr> -->
                                 <tr *ngFor="let row of tableData">
-                                    <td><md-checkbox></md-checkbox></td>
+                                    <td><md-checkbox color="primary"></md-checkbox></td>
                                     <td>{{ row.position }}</td>
                                     <td>{{ row.name }}</td>
                                     <td>{{ row.weight }}</td>
