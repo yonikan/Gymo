@@ -4,20 +4,18 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgMaterialModule } from './shared/ng-material.module';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutingModule } from './app.routing';
 
-// import { CoreModule } from './core/core.module';
-// import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 // import { AuthModule } from './auth/auth.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
 import { AuthService } from './auth/services/auth.service';
 import { AuthGuard } from './auth/services/auth-guard.service';
-import { AppStoreService } from './shared/app-store.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,27 +32,27 @@ import { CanvasComponent } from './core/canvas/canvas.component';
 import { MonitorDialogComponent } from './core/header-top/monitor-dialog/monitor-dialog.component';
 import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog/add-widget-dialog.component';
 
-import { ShowMenuDirective } from './shared/show-menu.directive';
-import { NoDataComponent } from './shared/no-data/no-data.component';
 import { MembersComponent } from './members/members.component';
 import { AuthComponent } from './auth/auth.component';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
     CanvasComponent,
+    HeaderComponent,
+    
+    
     HeaderTopComponent,
+    MonitorDialogComponent,
+    AddWidgetDialogComponent,
     HeaderBottomComponent,
-    FooterComponent,
+    // FooterComponent,
     ContentComponent,
     SidebarComponent,
     AppComponent,
     HomeComponent,
     FeaturesComponent,
     SettingsComponent,
-    MonitorDialogComponent,
-    AddWidgetDialogComponent,
-    NoDataComponent,
-    ShowMenuDirective,
     MembersComponent,
     AuthComponent    
   ],
@@ -68,18 +66,16 @@ import { AuthComponent } from './auth/auth.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgMaterialModule,
-    // CoreModule,
-    // SharedModule,
-    // AuthModule,
-    DashboardModule,
+    CoreModule,    
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    SharedModule.forRoot(), // Added the forRoot to achieve services acts as singelton at all modules.
+    // AuthModule,
+    DashboardModule
   ],
   providers: [
     AuthService,
-    AuthGuard,
-    AppStoreService
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

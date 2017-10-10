@@ -1,0 +1,21 @@
+{
+  "name": "gymo-server",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "node server.js"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.6",
+    "morgan": "^1.8.2",
+    "multer": "^1.3.0",
+    "serve-favicon": "^2.4.3",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {}
+}

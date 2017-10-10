@@ -17,6 +17,10 @@
                 </button> 
 
                 <button md-icon-button (click)="directToInvestigation(widgetData.id)">
+                    
+                    <!-- test another data aproch other than router sendind data -->
+                    <!-- <a [routerLink]="['/users', username]">{{ username }} Profile</a> -->
+                        
                     <md-icon mdTooltip="Investigation Mode">call_made</md-icon>                                                  
                 </button> 
 
@@ -79,7 +83,7 @@
                                 </tr> -->
                                 <tr *ngFor="let row of tableData">
                                     <td><md-checkbox color="primary"></md-checkbox></td>
-                                    <td>{{ row.position }}</td>
+                                    <!-- <td>{{ row.position }}</td> -->
                                     <td>{{ row.name }}</td>
                                     <td>{{ row.weight }}</td>
                                     <td>{{ row.symbol }}</td>

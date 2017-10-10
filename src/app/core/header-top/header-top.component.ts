@@ -13,8 +13,7 @@ import { MonitorDialogComponent } from './monitor-dialog/monitor-dialog.componen
 export class HeaderTopComponent implements OnInit {
 
     username;
-    isLoggedin;
-
+    
     constructor(public dialog: MdDialog, public authService: AuthService, private router: Router ) {
   
     } 
@@ -22,7 +21,6 @@ export class HeaderTopComponent implements OnInit {
     ngOnInit() {
       this.username = this.authService.user;
       // console.log(this.username);
-      this.isLoggedin = this.authService.isLoggedin();
     }
   
     openMonitorDialog() {

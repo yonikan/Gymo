@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { MdDialog } from '@angular/material';
 import { AddWidgetDialogComponent } from '../../core/header-bottom/add-widget-dialog/add-widget-dialog.component';
-import { ANIMATE_ON_ROUTE_ENTER } from '../../shared/router.transition';
+import { ANIMATE_ON_ROUTE_ENTER } from '../../core/router.transition';
 
 @Component({
   selector: 'gymo-widget',

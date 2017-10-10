@@ -12,8 +12,8 @@
                 <md-card>
                     <md-card-content>
                         <div class="" *ngIf="authPage === 'login'" >
-                            <md-form-field class="example-full-width">
-                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+                            <md-form-field class="example-full-width" [hideRequiredMarker]="true">
+                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" required>
                             </md-form-field>
     
                             <md-form-field class="example-full-width">
@@ -24,33 +24,25 @@
                                 <i class="material-icons"></i> Log-in
                             </button>
 
-                            <button md-raised-button class="other-btn" (click)="loginWithGoogle()">
+                            <!-- <button md-raised-button class="other-btn" (click)="loginWithGoogle()">
                                 <i class="material-icons"></i> Log-in With Google
                             </button>
-                            
-                            <md-checkbox></md-checkbox> Stay logged in next time
-                            
 
-                                                        
+                            <button md-raised-button class="other-btn" (click)="null">
+                                    <i class="material-icons"></i> Log-in With Facebook
+                            </button> -->
+
                             <div class="more-actions">
-                                <div class=""><a (click)="authPage = 'reset'" class="">Forgot password?</a></div>
-                                <div>Do not have an account? <a (click)="authPage = 'signup'">Sign up</a></div>
+                                <div>Do not have an account? <a (click)="authPage = 'signup'">Sign up</a></div>                                    
+                                <div class=""><a (click)="authPage='reset'" class="">Forgot password?</a></div>
                             </div>
-    
-    
-                            <!-- <button md-raised-button class="other-btn" (click)="null">
-                                <i class="material-icons"></i> Log-in With Facebook
-                            </button> -->
                             
-                            <!-- <button md-raised-button (click)="signup()" [disabled]="!email || !password">
-                                <i class="material-icons"></i> Log-out
-                            </button> -->
                         </div>
 
                         <div class="" *ngIf="authPage === 'signup'">
 
                             <md-form-field class="example-full-width">
-                                <input mdInput [(ngModel)]="displayName" type="text" placeholder="Full Name" >
+                                <input mdInput [(ngModel)]="displayName" type="text" placeholder="Full Name">
                             </md-form-field>
 
                             <!-- <md-form-field class="example-full-width">
@@ -73,11 +65,11 @@
                             </table>
 
                             <md-form-field class="example-full-width">
-                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+                                <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" required>
                             </md-form-field>
     
                             <md-form-field class="example-full-width">
-                                    <input mdInput [(ngModel)]="password" type="password" placeholder="Password" >
+                                    <input mdInput [(ngModel)]="password" type="password" placeholder="Password" required>
                             </md-form-field>
     
                             <button md-raised-button class="" (click)="login()">

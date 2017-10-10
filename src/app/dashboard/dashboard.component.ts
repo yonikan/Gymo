@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ANIMATE_ON_ROUTE_ENTER } from '../shared/router.transition';
 
 import { DashboardStoreService } from './services/dashboardStore.service';
+import { ANIMATE_ON_ROUTE_ENTER } from '../core/router.transition';
 
 
 @Component({

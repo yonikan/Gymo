@@ -1,41 +1,69 @@
-<div *ngIf="authService.user | async">
-  <div class="header-top-wrapper" >
-    <div class="actions">
+<div class="header-top-wrapper" >
+  <div class="actions">
 
-          <span class="animation-wrapper" mdTooltip="Monitoring" (click)="openMonitorDialog()">
-            <i class="material-icons">directions_run</i>
-            <i class="material-icons animation">cached</i>
-          </span>
+        <span class="animation-wrapper" mdTooltip="Monitoring" (click)="openMonitorDialog()">
+          <i class="material-icons">directions_run</i>
+          <i class="material-icons animation">cached</i>
+        </span>
 
-          <span class="notification-wrapper" mdTooltip="Notification" [mdMenuTriggerFor]="notificationMenu">
-              <i class="material-icons" >notifications</i> 
-              <span class="badge">4</span>              
-          </span>
+        <span class="notification-wrapper" mdTooltip="Notification" [mdMenuTriggerFor]="notificationMenu">
+            <i class="material-icons" >notifications</i> 
+            <span class="badge">4</span>              
+        </span>
 
-          <span mdTooltip="My Account" [mdMenuTriggerFor]="menu">
-               <i class="material-icons">account_box</i> {{ (authService.user | async)?.email }}
-          </span>
+        <span mdTooltip="My Account" [mdMenuTriggerFor]="accountMenu">
+              <i class="material-icons">account_box</i> {{ (authService.user | async)?.email }}
+        </span>
 
-          <md-menu #menu="mdMenu">
-            <button md-menu-item (click)="logout()" *ngIf="authService.user | async">
-                    <md-icon>open_in_new</md-icon>
-                    <span>Log out</span>
+        <md-menu #accountMenu="mdMenu">
+            <button md-menu-item *ngIf="authService.user | async" routerLink="/settings">
+                <md-icon>settings</md-icon>
+                <span>Settings</span>
             </button>
-            <!-- <button md-menu-item>
-              <md-icon>dialpad</md-icon>
-              <span>Full Screen</span>
-            </button> -->
-          </md-menu>
-         
-          <md-menu #notificationMenu="mdMenu">
-            <md-list>
-              <md-list-item>
-                <img md-list-avatar  src="../../assets/img/profile-sm.jpg">
-                <h3 md-line>Title 1</h3>
-                <p md-line>
-                  <span>An awesome description</span>
-                </p>
-              </md-list-item>
+
+            <button md-menu-item>
+                <md-icon>dialpad</md-icon>
+                <span>Full Screen</span>
+            </button>
+            <md-divider></md-divider>
+            
+            <button md-menu-item (click)="logout()" *ngIf="authService.user | async">
+                  <md-icon>open_in_new</md-icon>
+                  <span>Log out</span>
+            </button>
+
+        </md-menu>
+        
+        <md-menu #notificationMenu="mdMenu">
+          <md-list>
+            <md-list-item>
+              <img md-list-avatar  src="../../assets/img/profile-sm.jpg">
+              <h3 md-line>Title 1</h3>
+              <p md-line>
+                <span>An awesome description</span>
+              </p>
+            </md-list-item>
+
+            <md-divider></md-divider>
+            
+            <md-list-item>
+              <img md-list-avatar  src="../../assets/img/profile-sm.jpg"> 
+              <h3 md-line>Title 2</h3>
+              <p md-line>
+                <span>Another awesome description</span>
+              </p>
+            </md-list-item>
+
+            <md-divider></md-divider>
+
+            <md-list-item>
+              <img md-list-avatar  src="../../assets/img/profile-sm.jpg"> 
+              <h3 md-line>Title 3</h3>
+              <p md-line>
+                <span>Yet another awesome description</span>
+              </p>
+            </md-list-item>
+
 
               <md-divider></md-divider>
               
@@ -46,18 +74,7 @@
                   <span>Another awesome description</span>
                 </p>
               </md-list-item>
-
-              <md-divider></md-divider>
-
-              <md-list-item>
-                <img md-list-avatar  src="../../assets/img/profile-sm.jpg"> 
-                <h3 md-line>Title 3</h3>
-                <p md-line>
-                  <span>Yet another awesome description</span>
-                </p>
-              </md-list-item>
-            </md-list>
-          </md-menu>
-    </div> 
-  </div>
+          </md-list>
+        </md-menu>
+  </div> 
 </div>

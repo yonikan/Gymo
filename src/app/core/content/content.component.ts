@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '../../shared/router.transition';
+import { routerTransition } from '../router.transition';
 
 @Component({
   selector: 'gymo-content',

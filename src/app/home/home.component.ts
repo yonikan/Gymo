@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ANIMATE_ON_ROUTE_ENTER } from '../shared/router.transition';
 import { AuthService } from '../auth/services/auth.service';
+import { ANIMATE_ON_ROUTE_ENTER } from '../core/router.transition';
 
 @Component({
   selector: 'gymo-home',

@@ -3,9 +3,7 @@ import { MdDialog } from '@angular/material';
 import { Router } from '@angular/router';
 import { AuthService } from '../../auth/services/auth.service';
 import { AddWidgetDialogComponent } from './add-widget-dialog/add-widget-dialog.component';
-
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-
 
 @Component({
   selector: 'gymo-header-bottom',
@@ -16,8 +14,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class HeaderBottomComponent implements OnInit {
 
     @Input() actionsList: any[];
-    isLoggedin;
-    currentPage;
+    // currentPage;
 
     constructor(
         public dialog: MdDialog,
@@ -26,9 +23,8 @@ export class HeaderBottomComponent implements OnInit {
         private location: Location
      ) { }
   
-    
     ngOnInit() {
-      this.isLoggedin = this.authService.isLoggedin();
+
     }
 
     ngOnChanges(changes: SimpleChanges) {

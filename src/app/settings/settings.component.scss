@@ -4,6 +4,14 @@
     padding-top: 40px;
     top: 88px;
     
+    .md-card {
+        // height: 900px;
+
+        .cover-test {
+            height:  300px !important;
+        }
+    }
+    
     .background {
         
         &::before {

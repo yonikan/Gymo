@@ -2,64 +2,62 @@
       <app-info-pane></app-info-pane>
   </md-sidenav> -->
 
-  <div *ngIf="authService.user | async">
-      <div class="header-bottom-wrapper">
+  <div class="header-bottom-wrapper">
 
-          <div class="" routerLink="/home">
-            <span><img src="./assets/img/logo.png" ></span>
-            <h1>GYMO</h1>
-          </div>
-
-          <span class="navigation">
-                <button md-button routerLinkActive="active" routerLink="/home">
-                  <i class="material-icons">home</i>
-                  <a>Home</a>
-                </button>
-
-                <button md-button routerLinkActive="active" routerLink="/dashboard">
-                  <i class="material-icons">widgets</i>
-                  <a>Dashboard</a>
-                </button>
-
-                <button md-button routerLinkActive="active" routerLink="/members">
-                  <i class="material-icons">people</i>
-                  <a>Members</a>
-                </button>
-
-                <button md-button routerLinkActive="active" routerLink="/features">
-                  <i class="material-icons">dns</i>
-                  <a>Features</a>
-                </button>
-
-                <button md-button routerLinkActive="active" routerLink="/settings">
-                  <i class="material-icons">settings</i>
-                  <a>Settings</a>
-                </button>
-
-          </span>
-
-          <span class="actions">
-              <button md-icon-button>
-                  <md-icon mdTooltip="Back" (click)="goBack()">arrow_back
-                    </md-icon>
-              </button>
-              <button md-icon-button>
-                  <md-icon mdTooltip="Add New Widget" (click)="openCreateWidgetDialog()">add</md-icon>
-              </button>
-              <button md-icon-button>                              
-                <md-icon mdTooltip="Save Dashboad">save</md-icon>
-              </button>
-              <button md-icon-button  [mdMenuTriggerFor]="dashboardMenu">                 
-                <md-icon >more_vert</md-icon>
-              </button>
-          </span>
-
-            <md-menu #dashboardMenu="mdMenu">
-                <button md-menu-item>
-                    <md-icon>star_rate</md-icon>
-                    <span>Help</span>
-                </button>
-            </md-menu>
-
+      <div class="" routerLink="/home">
+        <span><img src="./assets/img/logo.png" ></span>
+        <h1>GYMO</h1>
       </div>
+
+      <span class="navigation">
+            <button md-button routerLinkActive="active" routerLink="/home">
+              <i class="material-icons">home</i>
+              <a>Home</a>
+            </button>
+
+            <button md-button routerLinkActive="active" routerLink="/dashboard">
+              <i class="material-icons">widgets</i>
+              <a>Dashboard</a>
+            </button>
+
+            <button md-button routerLinkActive="active" routerLink="/members">
+              <i class="material-icons">people</i>
+              <a>Members</a>
+            </button>
+
+            <button md-button routerLinkActive="active" routerLink="/features">
+              <i class="material-icons">dns</i>
+              <a>Features</a>
+            </button>
+
+            <!-- <button md-button routerLinkActive="active" routerLink="/settings">
+              <i class="material-icons">settings</i>
+              <a>Settings</a>
+            </button> -->
+
+      </span>
+
+      <span class="actions">
+          <button md-icon-button *ngIf="actionsList">
+              <md-icon mdTooltip="Back" (click)="goBack()">arrow_back
+                </md-icon>
+          </button>
+          <button md-icon-button>
+              <md-icon mdTooltip="Add New Widget" (click)="openCreateWidgetDialog()">add</md-icon>
+          </button>
+          <button md-icon-button>                              
+            <md-icon mdTooltip="Save Dashboad">save</md-icon>
+          </button>
+          <button md-icon-button  [mdMenuTriggerFor]="dashboardMenu">                 
+            <md-icon >more_vert</md-icon>
+          </button>
+      </span>
+
+        <md-menu #dashboardMenu="mdMenu">
+            <button md-menu-item>
+                <md-icon>star_rate</md-icon>
+                <span>Help</span>
+            </button>
+        </md-menu>
+
   </div>

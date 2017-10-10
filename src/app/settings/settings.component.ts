@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ANIMATE_ON_ROUTE_ENTER } from '../shared/router.transition';
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
+import { ANIMATE_ON_ROUTE_ENTER } from '../core/router.transition';
 
 const URL = 'http://localhost:3000/profile';
 
