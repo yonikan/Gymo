@@ -1,0 +1,41 @@
+<div class="" >
+    
+                                <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="displayName" type="text" placeholder="Full Name">
+                                </md-form-field>
+    
+                                <!-- <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="last" type="text" placeholder="Last Name" >
+                                </md-form-field> -->
+    
+                                <table>
+                                        <tr>
+                                            <td>
+                                                <md-form-field class="example-full-width">
+                                                        <input mdInput [(ngModel)]="last" type="text" placeholder="Gender" >
+                                                </md-form-field>
+                                            </td>
+                                            <td>
+                                                <md-form-field class="example-full-width">
+                                                    <input mdInput [(ngModel)]="last" type="text" placeholder="birthday" >
+                                                </md-form-field>
+                                            </td>
+                                        </tr>
+                                </table>
+    
+                                <md-form-field class="example-full-width">
+                                    <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" required>
+                                </md-form-field>
+        
+                                <md-form-field class="example-full-width">
+                                        <input mdInput [(ngModel)]="password" type="password" placeholder="Password" required>
+                                </md-form-field>
+        
+                                <button md-raised-button class="" (click)="login()">
+                                    <i class="material-icons"></i> Sign-Up
+                                </button>
+    
+                                <div class="more-actions">
+                                    <div>Already have an account? <a routerLink="/signin">Sign in</a></div>
+                                </div>
+                            </div>

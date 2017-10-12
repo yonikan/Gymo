@@ -8,7 +8,9 @@
 </md-sidenav-container> -->
 
 
-<div *ngIf="authService.user | async">
+<!-- <div *ngIf="authService.user | async"> -->
+<div >
+                                
         <gymo-header></gymo-header>
 
         <gymo-content></gymo-content>
@@ -16,5 +18,5 @@
         <gymo-footer ></gymo-footer>
 </div>
 
-<gymo-auth *ngIf="!(authService.user | async)"></gymo-auth>
+<!-- <gymo-auth *ngIf="!(authService.user | async)"></gymo-auth> -->
         

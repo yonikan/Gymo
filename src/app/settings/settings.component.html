@@ -1,41 +1,78 @@
+
 <div class="container-fluid">
-    <div class="row background">
+    <div class="row">
         <div class="col-md-12" >
-            <!-- <md-card>
+            <div class="row" >
+                <div class="col-md-12" >
+                  <md-card>
+                    <!-- <md-card-header>Settings</md-card-header>  -->
+                    <md-card-content >
+                        <div class="row">
+                            <div class="col-md-2 menu-col">
+                                <ul>
+                                    <li><a  routerLinkActive="active" routerLink="/profile">Profile</a></li>                                                                            
+                                    <li><a routerLinkActive="active" routerLink="/general">General</a></li>
+                                    <li><a routerLinkActive="active" routerLink="/change_password">Change Password</a></li>
+                                </ul>
+                            </div>    
 
-                <img  src="../../assets/img/profile-sm.jpg" class="cover-test">
+                            <div class="col-md-10 content-col">
+                                <router-outlet ></router-outlet>
+                                <!-- <div class="" *ngIf="settingsPage === 'profile'">
 
-                <md-card-content>
+                                        <h2>Profile</h2>
+    
+                                        <md-form-field class="example-full-width">
+                                            <input mdInput  type="text" placeholder="Full Name">
+                                        </md-form-field>
+    
+            
+                                        <md-form-field class="example-full-width">
+                                                <input mdInput  type="text" placeholder="Gender" >
+                                        </md-form-field>
+    
+    
+                                        <md-form-field class="example-full-width">
+                                                <input mdInput type="text" placeholder="birthday" >
+                                            </md-form-field>
+    
+                                        <md-form-field class="example-full-width">
+                                            <input mdInput  type="email" placeholder="E-Mail" required>
+                                        </md-form-field>
+                
+                                        <md-form-field class="example-full-width">
+                                                <input mdInput type="password" placeholder="Password" required>
+                                        </md-form-field>
+                
+                                        <button md-raised-button class="" (click)="null">
+                                            <i class="material-icons"></i> Update Profile
+                                        </button>
+                                </div> -->
 
-                </md-card-content>
-
-            </md-card> -->
-
-            <div class="row background">
-                <div class="col-md-12 details-column" [ngClass]="animateOnRouteEnter">
-                    <div class="row">
-                        <div class="col-md-1">
-                            <img src="../../assets/img/profile-sm.jpg" class="">                            
+                            </div>  
                         </div>
-                        <div class="col-md-11">
-                            <div class="margin-helper">
-                                <h2>YONI KANGUN</h2>
-                                <h4>Web Developer <md-icon>place</md-icon><span>israel</span></h4>
-                                <md-chip-list>
-                                    <md-chip>Light Activity</md-chip>
-                                    <md-chip>Medium Activity</md-chip>
-                                    <md-chip color="primary" selected="true">On Fire</md-chip>
-                                </md-chip-list>
-                            </div>
-                        </div>  
-                    </div>
+                    </md-card-content>
+                  </md-card>
                 </div>
             </div>
+        </div>
+    </div>
+  </div>
 
+
+
+
+
+
+
+
+<!-- <div class="container-fluid">
+    <div class="row background">
+        <div class="col-md-12" >
 
         </div>
     </div>
-</div>
+</div> -->
   
 
 

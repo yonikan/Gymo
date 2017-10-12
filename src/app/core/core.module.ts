@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
-import { FooterComponent } from './footer/footer.component';
+// import { FooterComponent } from './footer/footer.component';
 // import { HeaderComponent } from './header/header.component';
 // import { CanvasComponent } from './canvas/canvas.component';
 // import { HeaderTopComponent } from './header-top/header-top.component';
@@ -27,7 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     // SidebarComponent,
     // MonitorDialogComponent,
     // AddWidgetDialogComponent,
-    FooterComponent,
+    // FooterComponent,
     // HeaderComponent,
     // AuthComponent
   ],
@@ -39,7 +39,7 @@ import { FooterComponent } from './footer/footer.component';
     // SidebarComponent,
     // MonitorDialogComponent,
     // AddWidgetDialogComponent,
-    FooterComponent
+    // FooterComponent
   ]
 })
 export class CoreModule { }

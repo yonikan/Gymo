@@ -19,7 +19,7 @@
     i {
         margin-left: 30px;
         // border-left: 1px solid $white;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     h1 {
@@ -31,6 +31,7 @@
     .actions {
         position: absolute;
         right: 30px;
+        top: 6px;
         // padding-left: 30px;
         // padding-top: 8px;
 
@@ -69,12 +70,17 @@
                 background-color: #0cc2aa;
                 border-radius: 10px;
                 padding: 0 4px;
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: bold;
                 position: relative;
-                right: 3px;
-                bottom: 7px;
+                right: 0px;
+                bottom: 2px;
             }
+        }
+
+        h3 {
+            text-align: center;
+            
         }
     }
 
@@ -103,4 +109,51 @@
         background-color: $primary;
         }
     }
+}
+
+
+
+
+
+
+md-list {
+    padding-top: 0;
+}
+
+md-list-item {
+
+    .avatar-mine {
+        // background-color: #f4f3f2;
+        // color: #5c5c5c;
+        // border: 2px solid rgb(216, 216, 216);
+    }
+
+    h2 {
+        margin: 0 auto;
+        font-size: 17px;
+        font-weight: 400;
+
+        a {
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+
+
+    &:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+
+        &:first-child {
+            background-color: $white;
+            cursor: default;            
+        }
+
+        &:last-child {
+            background-color: #effffc;
+            
+        }
+    }
+
+
 }

@@ -7,11 +7,11 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-var flash    = require('connect-flash');
-var configDB = require('./config/database.js');
-mongoose.connect(configDB.url); // connect to our database
-var passport = require('passport');
-require('./config/passport')(passport); // pass passport for configuration
+// var flash    = require('connect-flash');
+// var configDB = require('./config/database.config.js');
+// mongoose.connect(configDB.url); // connect to our database
+// var passport = require('passport');
+// require('./config/passport.config')(passport); // pass passport for configuration
 
 const app = express();
 
@@ -21,10 +21,10 @@ const app = express();
 
 app.use(favicon(path.join(__dirname, '../dist', 'favicon.ico')));
 
-app.use(express.cookieParser()); // needed for auth
-app.use(express.bodyParser()); // get information from html forms
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(express.cookieParser()); // needed for auth
+// app.use(express.bodyParser()); // get information from html forms
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, '../dist')));
 
@@ -37,10 +37,10 @@ app.use((req, res, next) => {
 
 
 // required for passport
-app.use(express.session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
-app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+// app.use(express.session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+// app.use(passport.initialize());
+// app.use(passport.session()); // persistent login sessions
+// app.use(flash()); // use connect-flash for flash messages stored in session
 
 
 

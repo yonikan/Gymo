@@ -1,0 +1,11 @@
+<p>
+  general works!
+</p>
+
+<form>
+  <md-select placeholder="Language" [(ngModel)]="selectedValue" name="language">
+    <md-option *ngFor="let language of languages" [value]="language.value">
+      {{language.viewValue}}
+    </md-option>
+  </md-select>
+</form>

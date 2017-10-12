@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
+// import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import { ANIMATE_ON_ROUTE_ENTER } from '../core/router.transition';
 
 const URL = 'http://localhost:3000/profile';
@@ -16,6 +16,16 @@ export class SettingsComponent implements OnInit {
   
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
   
+  isLogin: boolean = true;
+  authPage: string = 'login';
+
+  email: string;
+  password: string;
+  displayName: string;
+
+
+  settingsPage: string = 'profile';
+  
   constructor() { }
 
   ngOnInit() {
@@ -26,4 +36,7 @@ export class SettingsComponent implements OnInit {
     // };
   }
 
+  viewPage(currentPage: string) {
+    this.settingsPage = currentPage;    
+  }
 }

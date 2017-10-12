@@ -9,18 +9,15 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppRoutingModule } from './app.routing';
 
-import { CoreModule } from './core/core.module';
+// import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-// import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './auth/auth.module';
+import { SettingsModule } from './settings/settings.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-
-import { AuthService } from './auth/services/auth.service';
-import { AuthGuard } from './auth/services/auth-guard.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FeaturesComponent } from './features/features.component';
-import { SettingsComponent } from './settings/settings.component';
 
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ContentComponent } from './core/content/content.component';
@@ -33,28 +30,23 @@ import { MonitorDialogComponent } from './core/header-top/monitor-dialog/monitor
 import { AddWidgetDialogComponent } from './core/header-bottom/add-widget-dialog/add-widget-dialog.component';
 
 import { MembersComponent } from './members/members.component';
-import { AuthComponent } from './auth/auth.component';
 import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
     CanvasComponent,
     HeaderComponent,
-    
-    
     HeaderTopComponent,
     MonitorDialogComponent,
     AddWidgetDialogComponent,
     HeaderBottomComponent,
-    // FooterComponent,
+    FooterComponent,
     ContentComponent,
     SidebarComponent,
     AppComponent,
     HomeComponent,
     FeaturesComponent,
-    SettingsComponent,
     MembersComponent,
-    AuthComponent    
   ],
   entryComponents: [
     MonitorDialogComponent,
@@ -66,17 +58,15 @@ import { HeaderComponent } from './core/header/header.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule,    
+    // CoreModule,    
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    SharedModule.forRoot(), // Added the forRoot to achieve services acts as singelton at all modules.
-    // AuthModule,
+    SharedModule.forRoot(),
+    AuthModule,
+    SettingsModule,
     DashboardModule
   ],
-  providers: [
-    AuthService,
-    AuthGuard
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

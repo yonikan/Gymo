@@ -11,10 +11,6 @@ import { ANIMATE_ON_ROUTE_ENTER } from '../core/router.transition';
 export class AuthComponent implements OnInit {
 
   animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
-  
-  isLogin: boolean = true;
-  authPage: string = 'login';
-
   email: string;
   password: string;
   displayName: string;

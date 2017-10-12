@@ -1,0 +1,17 @@
+<div class="" >
+    <md-form-field class="example-full-width">
+        <input mdInput [(ngModel)]="email" type="email" placeholder="E-Mail" >
+    </md-form-field>
+
+    <md-form-field class="example-full-width">
+            <input mdInput [(ngModel)]="password" type="password" placeholder="Password" >
+    </md-form-field>
+
+    <button md-raised-button class="" (click)="null">
+        <i class="material-icons"></i> Rest Password
+    </button>
+    
+    <div class="more-actions">
+        <div>Do not have an account? <a routerLink="/signup">Sign up</a></div>                                
+    </div>
+</div>

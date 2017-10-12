@@ -12,32 +12,43 @@
         </span>
 
         <span mdTooltip="My Account" [mdMenuTriggerFor]="accountMenu">
-              <i class="material-icons">account_box</i> {{ (authService.user | async)?.email }}
+              <!-- <i class="material-icons">account_box</i> {{ (authService.user | async)?.email }} -->
+              <i class="material-icons">account_box</i> testt
+              
         </span>
 
         <md-menu #accountMenu="mdMenu">
-            <button md-menu-item *ngIf="authService.user | async" routerLink="/settings">
+            <!-- <button md-menu-item *ngIf="authService.user | async" routerLink="/settings">               -->
+            <button md-menu-item  routerLink="/settings">
                 <md-icon>settings</md-icon>
                 <span>Settings</span>
             </button>
 
-            <button md-menu-item>
+            <!-- <button md-menu-item>
                 <md-icon>dialpad</md-icon>
                 <span>Full Screen</span>
-            </button>
-            <md-divider></md-divider>
+            </button> -->
+            <!-- <md-divider></md-divider> -->
             
-            <button md-menu-item (click)="logout()" *ngIf="authService.user | async">
+            <button md-menu-item (click)="logout()">
                   <md-icon>open_in_new</md-icon>
                   <span>Log out</span>
             </button>
 
         </md-menu>
         
-        <md-menu #notificationMenu="mdMenu">
+        <md-menu #notificationMenu="mdMenu" class="notifications">
           <md-list>
+
             <md-list-item>
-              <img md-list-avatar  src="../../assets/img/profile-sm.jpg">
+                <h2>Notifications</h2>
+            </md-list-item>
+            
+            <md-divider></md-divider>
+            
+
+            <md-list-item >             
+              <img md-list-avatar class="avatar-mine " src="../../assets/img/profile-sm.jpg">
               <h3 md-line>Title 1</h3>
               <p md-line>
                 <span>An awesome description</span>
@@ -64,16 +75,13 @@
               </p>
             </md-list-item>
 
-
               <md-divider></md-divider>
               
               <md-list-item>
-                <img md-list-avatar  src="../../assets/img/profile-sm.jpg"> 
-                <h3 md-line>Title 2</h3>
-                <p md-line>
-                  <span>Another awesome description</span>
-                </p>
+                  <h2><a href="#">View Full Changelog</a></h2>
               </md-list-item>
+
+
           </md-list>
         </md-menu>
   </div> 
