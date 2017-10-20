@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -48,21 +49,20 @@ app.use((req, res, next) => {
 // app.use('/api', api);
 // app.use('/widgets', widgetsApi);
 // app.use('/profile', profileApi);
-
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
+
 const port = process.env.PORT || '3000';
 app.set('port', port);
-
 const server = http.createServer(app);
 var io = require('socket.io').listen(server);
-
 server.listen(port, () => console.log(`API running on localhost:${port}`));
 
 
-io.sockets.on('connection', function(socket){
+
+io.sockets.on('connection', socket => {
   console.log('Socket connected');
   
   // // Socket event for gist created

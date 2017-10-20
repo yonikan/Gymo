@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
 import { SharedModule } from '../shared/shared.module';
 import { ChartsModule } from 'ng2-charts';
 import { DashboardRoutingModule } from './dashboard.routing';
@@ -21,8 +20,7 @@ import { InvestigationComponent } from './investigation/investigation.component'
   imports: [
     CommonModule,
     SharedModule,
-    DashboardRoutingModule,    
-    HttpModule,
+    DashboardRoutingModule,
     ChartsModule
   ],
   providers: [

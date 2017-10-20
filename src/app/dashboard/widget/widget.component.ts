@@ -1,23 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges, AfterViewInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MdDialog } from '@angular/material';
 import { AddWidgetDialogComponent } from '../../core/header-bottom/add-widget-dialog/add-widget-dialog.component';
 import { ANIMATE_ON_ROUTE_ENTER } from '../../core/router.transition';
+import {BaseChartDirective} from 'ng2-charts/ng2-charts';
+
 
 @Component({
   selector: 'gymo-widget',
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })
-export class WidgetComponent implements OnInit {
+export class WidgetComponent implements OnInit, OnChanges, AfterViewInit  {
 
   @Input() widgetType: any[];
-
   @Input() widgetData: any[];
-  // widgetType;
-  animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
+  // @ViewChild(BaseChartDirective) chart: BaseChartDirective;
+  
   isLoading: boolean = true; 
   isListViewMode: boolean = false; 
+  animateOnRouteEnter = ANIMATE_ON_ROUTE_ENTER;
 
   displayedColumns = ['position', 'name', 'weight', 'symbol'];
   tableData = [
@@ -31,7 +33,6 @@ export class WidgetComponent implements OnInit {
 
 
   constructor(private router: Router, public dialog: MdDialog) {}
-
 
    // DoughnutChart ===================================================
   public doughnutChartOptions: any = {
@@ -114,16 +115,24 @@ export class WidgetComponent implements OnInit {
 
 
   ngOnInit() {
+    // console.log(this.widgetData);
+    // console.log(this.widgetType);
+    
     setTimeout(() => {
        this.isLoading = false;
     }, 1000)
-
     // this.isLoading = false;
-
-    // console.log(this.widgetData);
-    
-    // this.widgetType =  this.widgetData["type"];
   }
+
+  ngOnChanges(changes: SimpleChanges) {
+
+  }
+
+  ngAfterViewInit() {
+    // console.log(this.widgetData);
+    // console.log(this.widgetType);
+  }
+
 
   editWidget() {
     this.dialog.open(AddWidgetDialogComponent);    

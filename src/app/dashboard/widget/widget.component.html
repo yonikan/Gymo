@@ -1,4 +1,4 @@
-<md-card>
+<md-card >
     <div class="is-loading" *ngIf="isLoading">
         <md-spinner color="primary"></md-spinner>
     </div>
@@ -46,7 +46,7 @@
             </span>
         </md-card-header> 
 
-        <md-card-content >
+        <md-card-content>
             <div *ngIf="!isListViewMode" [ngSwitch]="widgetType">
                 <div *ngSwitchCase="'doughnutChart'">
                     <canvas baseChart

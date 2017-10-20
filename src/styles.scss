@@ -38,3 +38,6 @@ body {
   background-color: $background-color-light-blue;
 }
 
+button:focus {
+  outline: none;
+}

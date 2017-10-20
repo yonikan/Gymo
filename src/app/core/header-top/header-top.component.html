@@ -19,17 +19,11 @@
 
         <md-menu #accountMenu="mdMenu">
             <!-- <button md-menu-item *ngIf="authService.user | async" routerLink="/settings">               -->
-            <button md-menu-item  routerLink="/settings">
+            <button md-menu-item routerLinkActive="active" routerLink="/profile">
                 <md-icon>settings</md-icon>
                 <span>Settings</span>
             </button>
 
-            <!-- <button md-menu-item>
-                <md-icon>dialpad</md-icon>
-                <span>Full Screen</span>
-            </button> -->
-            <!-- <md-divider></md-divider> -->
-            
             <button md-menu-item (click)="logout()">
                   <md-icon>open_in_new</md-icon>
                   <span>Log out</span>

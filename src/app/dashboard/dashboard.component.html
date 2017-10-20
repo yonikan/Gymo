@@ -7,9 +7,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-10 widgets-column" >
+        <div class="col-md-10 widgets-column" [ngClass]="animateOnRouteEnter">
             <div class="row" >
-                <div class="col-md-4" *ngFor="let item of widgetsData; let i = index" [ngClass]="animateOnRouteEnter">
+                <div class="col-md-4" *ngFor="let item of widgetsData; let i = index">
                     <gymo-widget [widgetType]="widgetsData[i].type" [widgetData]="widgetsData[i]"></gymo-widget>
                     <!-- <gymo-widget [widgetData]="widgetsData[i]"></gymo-widget>                     -->
                 </div>
